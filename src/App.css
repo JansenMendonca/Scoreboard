@@ -30,3 +30,7 @@
 .inline{
   display: inline;
 }
+
+.to-right{
+ text-align: right;
+}

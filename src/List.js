@@ -24,17 +24,20 @@ class List extends Component{
 
        listArray.push(input)
 
+        
+
        this.setState({
            list: listArray,
            userInput : ''
        })
     }
 
+   
     render(){
         return(
-            <div>
+            <div className='class="input-group'>
                 <ul className='list-group'>
-                    {this.state.list.map((val, i)=><li key={i} className='list-group-item'>{val} : <span><Buttons /></span></li>)}                    
+                    {this.state.list.map((val, i)=><li key={i} className='list-group-item' >{val} : <span><Buttons /></span></li>)}                    
                 </ul>
                 <hr />
                 <input 
@@ -43,9 +46,8 @@ class List extends Component{
                     type='text' 
                     placeholder="Enter player's name..." 
                 />
-                <button onClick={()=> this.addPlayer(this.state.userInput)} >Add PLayer</button>
-                
-                
+                <button className='btn btn-secondary' onClick={()=> this.addPlayer(this.state.userInput)} >Add PLayer</button>
+                          
             </div>
         )
     }
